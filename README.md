@@ -1,9 +1,17 @@
 # AI Website Explainer Widget
+🔗 Live Demo: https://ai-website-explainer.vercel.app/
 
-Production-ready React + TypeScript + Tailwind widget that can be used as:
+Production-ready AI widget built with React, TypeScript, and Tailwind that can be embedded into any website or run as a standalone app.
 
+## Features
+
+- AI-powered website explanation using OpenAI
+- Embeddable widget via a single script tag
+- Reusable React component architecture
+- Real-time chat with follow-up questions
+- Secure API handling through backend proxy
+- Clean and responsive UI design
 - A normal Vite app for local development
-- An embeddable website widget mounted from a single script bundle
 
 ## Quick start
 
