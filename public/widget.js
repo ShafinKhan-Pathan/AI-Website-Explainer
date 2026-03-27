@@ -28,6 +28,6 @@
 
   var script = document.createElement('script');
   script.type = 'module';
-  script.src = isDevServer ? baseUrl + 'src/embed.tsx' : baseUrl + 'widget-client.js';
+  script.src = baseUrl + 'widget-client.js';
   document.body.appendChild(script);
 })();
