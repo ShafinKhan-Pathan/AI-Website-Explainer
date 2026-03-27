@@ -9,7 +9,7 @@ export default defineConfig({
       entry: "src/embed.tsx",
       name: "AIWebsiteExplainer",
       fileName: () => "widget.js",
-      formats: ["es"],
+      formats: ["iife"],
     },
     rollupOptions: {
       output: {
