@@ -1,20 +1,19 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
   build: {
     cssCodeSplit: false,
-    lib: {
-      entry: "src/embed.tsx",
-      name: "AIWebsiteExplainer",
-      fileName: () => "widget.js",
-      formats: ["iife"],
-    },
     rollupOptions: {
-      output: {
-        inlineDynamicImports: true,
+      input: {
+        app: 'index.html',
+        widget: 'src/embed.tsx'
       },
-    },
-  },
+      output: {
+        entryFileNames: (chunkInfo) => (chunkInfo.name === 'widget' ? 'widget.js' : 'assets/[name]-[hash].js'),
+        assetFileNames: 'assets/[name]-[hash][extname]'
+      }
+    }
+  }
 });
