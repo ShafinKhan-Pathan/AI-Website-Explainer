@@ -2,7 +2,9 @@
 node_modules/
 
 # build output
-dist/
+dist/*
+!dist/widget.js
+!dist/assets/
 
 # environment files
 .env
